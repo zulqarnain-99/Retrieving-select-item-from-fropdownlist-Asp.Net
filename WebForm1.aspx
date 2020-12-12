@@ -18,6 +18,7 @@
                 <asp:ListItem Text="Delhi" Value="5"></asp:ListItem>
             </asp:DropDownList>
         </div>
+        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
     </form>
 </body>
 </html>

@@ -11,12 +11,30 @@ namespace Retrieving_select_item_from_fropdownlist_Asp.Net
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                DropDownList1.SelectedValue = "1";
+            }
         }
 
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            if(DropDownList1.SelectedValue == "-1")
+            {
+                Response.Write("Please select the value");
+            }
+            else
+            {
+                Response.Write(DropDownList1.SelectedItem.Text + "<br/>");
+                Response.Write(DropDownList1.SelectedItem.Value+ "<br/>");
+                Response.Write(DropDownList1.SelectedIndex+ "<br/>");
+
+            }
         }
     }
 }
